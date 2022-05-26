@@ -24,8 +24,6 @@ namespace SmartSchoolAPI.Controller
             return Ok(_context.Alunos);
         }
 
-        //api/aluno/byId
-        //http://www.localhost:5000/api/aluno/byId/1
         [HttpGet("byId/{id}")]
         public IActionResult GetById(int id)
         {
@@ -35,8 +33,6 @@ namespace SmartSchoolAPI.Controller
             return Ok(aluno);
         }
 
-        //api/aluno/nome
-        //http://www.localhost:5000/api/aluno/byName?nome=Marta&sobrenome=Kent
         [HttpGet("ByName")]
         public IActionResult GetByName(string nome, string sobrenome)
         {
@@ -48,7 +44,6 @@ namespace SmartSchoolAPI.Controller
             return Ok(aluno);
         }
 
-        //api/aluno
         [HttpPost]
         public IActionResult Post(Aluno aluno)
         {
@@ -57,7 +52,6 @@ namespace SmartSchoolAPI.Controller
             return Ok(aluno);
         }
 
-        //api/aluno/id
         [HttpPut("{id}")]
         public IActionResult Put(int id, Aluno aluno)
         {
@@ -69,7 +63,6 @@ namespace SmartSchoolAPI.Controller
             return Ok(aluno);
         }
 
-        //api/aluno/id
         [HttpPatch("{id}")]
         public IActionResult Patch(int id, Aluno aluno)
         {
@@ -81,7 +74,6 @@ namespace SmartSchoolAPI.Controller
             return Ok(aluno);
         }
 
-        //api/aluno/id
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
